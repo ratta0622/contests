@@ -19,9 +19,11 @@ int main(){
   int ans = 0;
   for(int i=0; i<N; ++i){
     ++ans;
-    Takahashi += A[greed[i].second] + B[greed[i].second];
-    Aoki -= A[greed[i].second];
-    if(Takahashi > Aoki) break;
+    /* Takahashi += A[greed[i].second] + B[greed[i].second]; */
+    /* Aoki -= A[greed[i].second]; */
+    /* if(Takahashi > Aoki) break; */
+    Aoki -= greed[i].first;
+    if(Aoki<0) break;
   }
 
   cout << ans << endl;
